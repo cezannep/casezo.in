@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Casezo.in",
-  description: "Created by Cezanne P",
+  description: "Legal Practice Management Platform",
 };
 
 export default function RootLayout({
