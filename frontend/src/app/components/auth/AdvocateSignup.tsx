@@ -1,12 +1,12 @@
 "use client";
 import Link from "next/link";
-import { FcGoogle } from "react-icons/fc";
 import Input from "../ui/Input";
 import Button from "../ui/Button";
-import { useUserSignup } from "@/app/hooks/useUserSignup";
+import { useAdvocateSignup } from "@/app/hooks/useAdvocateSignup";
 
-export default function UserSignup() {
-  const { form, onSubmit } = useUserSignup();
+export default function AdvocateSignup() {
+  const { form, onSubmit } = useAdvocateSignup();
+
   const {
     register,
     handleSubmit,
@@ -49,9 +49,17 @@ export default function UserSignup() {
           {/* Form */}
           <form
             onSubmit={handleSubmit(onSubmit)}
-            className="mt-5 lg:mt-10 space-y-4"
+            className="mt-10 space-y-4"
             noValidate
           >
+            <Input
+              type="text"
+              placeholder="Enrollment Number"
+              className="outline-none focus:border-[#A78344]"
+              error={errors.enrollmentNumber?.message}
+              {...register("enrollmentNumber")}
+            />
+
             <Input
               type="text"
               placeholder="Full Name"
@@ -80,6 +88,7 @@ export default function UserSignup() {
               type="password"
               placeholder="Password"
               className="outline-none focus:border-[#A78344]"
+              autoComplete="new-password"
               error={errors.password?.message}
               {...register("password")}
             />
@@ -87,6 +96,7 @@ export default function UserSignup() {
             <Input
               type="password"
               placeholder="Confirm Password"
+              autoComplete="new-password"
               className="outline-none focus:border-[#A78344]"
               error={errors.confirmPassword?.message}
               {...register("confirmPassword")}
@@ -97,25 +107,9 @@ export default function UserSignup() {
             </Button>
           </form>
 
-          {/* Divider */}
-          <div className="flex items-center gap-4 my-8">
-            <div className="flex-1 h-px bg-gray-600" />
-            <span className="text-sm text-gray-300">Or register with</span>
-            <div className="flex-1 h-px bg-gray-600" />
-          </div>
-
-          {/* Google */}
-          <Button
-            className="bg-[#ededed] transition py-4 rounded-xl flex items-center justify-center gap-3"
-            type="submit"
-          >
-            <FcGoogle size={20} />
-            <span className="font-medium text-black">Google</span>
-          </Button>
-
           {/* Login */}
           <p className="text-center mt-10 text-gray-400">
-            Already a User? {"  "}
+            Already a User?{" "}
             <Link href="/user-login" className="text-white font-semibold">
               Login
             </Link>

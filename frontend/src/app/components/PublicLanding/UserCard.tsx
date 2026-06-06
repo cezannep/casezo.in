@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { User, BriefcaseBusiness, CheckCircle } from "lucide-react";
-import { useSignUp } from "../../hooks/usehandleSignup"
+import { useSignupNavigation } from "../../hooks/useSignupNavigation"
 
 interface Props {
   type: "user" | "advocate";
@@ -11,7 +11,7 @@ interface Props {
 
 export default function UserCard({ type, data }: Props) {
 
-  const handleSignUp = useSignUp();
+  const navigateToSignup = useSignupNavigation();
 
   const isUser = type === "user";
 
@@ -73,7 +73,7 @@ export default function UserCard({ type, data }: Props) {
         className={`w-full cursor-pointer py-4 rounded-xl mt-5 text-white font-semibold ${
           isUser ? "bg-purple-900" : "bg-[#B78134] "
         }`}
-        onClick={() => handleSignUp({type})}
+        onClick={() => navigateToSignup({type})}
       >
         {isUser ? "Continue as User" : "Continue as Advocate"}
       </button>
