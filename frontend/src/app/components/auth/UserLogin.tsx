@@ -17,10 +17,12 @@ export default function UserLogin() {
     <section className="min-h-screen flex">
       {/* Left Side */}
       <div className="hidden lg:flex flex-1 bg-[#f5f5f5] items-center justify-center">
-        <h1 className="text-[120px] font-black leading-none">
-          casezo
-          <span className="text-[#A78344]">.in</span>
-        </h1>
+        <Link href={"/"}>
+          <h1 className="text-[120px] font-black leading-none">
+            casezo
+            <span className="text-[#A78344]">.in</span>
+          </h1>
+        </Link>
       </div>
 
       {/* Right Side */}
@@ -28,10 +30,12 @@ export default function UserLogin() {
         <div className="w-full max-w-sm">
           {/* Header */}
           <div className="text-center">
-            <h1 className=" lg:hidden text-5xl font-black leading-none">
-              casezo
-              <span className="text-[#A78344]">.in</span>
-            </h1>
+            <Link href={"/"}>
+              <h1 className=" lg:hidden text-5xl font-black leading-none">
+                casezo
+                <span className="text-[#A78344]">.in</span>
+              </h1>
+            </Link>
             <p className="hidden lg:flex lg:text-2xl font-serif leading-relaxed mt-2">
               Login Today.
               <br />
