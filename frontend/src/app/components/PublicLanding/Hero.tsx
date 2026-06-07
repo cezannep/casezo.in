@@ -18,6 +18,7 @@ export default function Hero() {
       width={1000}
       height={600}
       className="h-auto md:hidden block"
+      priority
       />
      
     </section>
