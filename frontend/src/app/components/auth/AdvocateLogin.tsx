@@ -72,6 +72,13 @@ export default function AdvocateLogin() {
             </Button>
           </form>
 
+          {/* verify-otp */}
+          <Link href={"/verify-otp"}>
+            <p className="text-center mt-5 font-bold text-gray-400 hover:text-gray-50 cursor-pointer">
+              forgot password
+            </p>
+          </Link>
+
           {/* Login */}
           <p className="text-center mt-10 text-gray-400">
             Not Registered yet? {"  "}
