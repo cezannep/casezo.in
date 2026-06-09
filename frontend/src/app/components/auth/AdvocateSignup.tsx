@@ -110,7 +110,7 @@ export default function AdvocateSignup() {
           {/* Login */}
           <p className="text-center mt-10 text-gray-400">
             Already a User?{" "}
-            <Link href="/user-login" className="text-white font-semibold">
+            <Link href="/advocate-login" className="text-white font-semibold">
               Login
             </Link>
           </p>
